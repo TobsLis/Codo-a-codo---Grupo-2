@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagenes/silueta-perro-gato.png" type="image/x-icon">
+    <link rel="stylesheet" href="estilos/estilosIndex.css">
+    <link rel="stylesheet" href="estilos/estilosGenerales.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>VETERINARIA SUR</title>
+
+</head>
+<body>
+    <div class="contenedor-grid-quienes"><!--CLASE CONTENEDOR GENERAL-->
+        <div class="contenedor-encabezado-nav">
+            <header class="encabezado-quienes"><!--CLASE ENCABEZADO-->
+                <div><img src="imagenes/silueta-perro-gato.png" alt="imagen muestra silueta de perro y gato ">
+                </div><!--IMAGEN-LOGO LADO IZQ ENCABEZADO-->
+                <div>
+                    <h1>VETERINARIA SUR</h1>
+                </div>
+                <div><img src="imagenes/silueta-perro-gato.png" alt="">
+                </div><!--IMAGEN-LOGO LADO DER ENCABE-->
+            </header>
+            
+            <nav class="menu-quienes"><!--CLASE DEL MENU DE NAV-->
+                <ul><i><b><!--sacar style en ul y puse italica a la lista y bold-->
+                            <li><a href="./index.html">Inicio</a></li>
+                            <li><a href="./petshop.html">Pet Shop</a></li>
+                            <li><a href="./servicios.html">Servicios</a></li>
+                            <li><a href="./turnos.html">Turnos</a></li>
+                            <li><a href="./quienes.html">Quienes somos</a></li>
+                            <li><a href="./contacto.html">Contacto</a></li>
+                        </b></i>
+                </ul>
+            </nav>
+        </div> 
+    <main>
+
+        <div class="carrusel-contenido">
+            <div class="carrusel-caja">
+                <div class="carrusel-elemento">
+                    <img class="imagenes" src="https://nanolog.vtexassets.com/assets/vtex.file-manager-graphql/images/9946cfad-70fe-47ed-bcd7-749a99d7f0fd___c3062a0db461f91dee404192dec71ed5.jpg" >
+                </div>
+                <div class="carrusel-elemento">   
+                    <img class="imagenes" src="https://www.kiwoko.com/blogmundoanimal/wp-content/uploads/2022/01/Los-mejores-juguetes-para-gatos-bebes.jpg">
+                </div>
+                <div class="carrusel-elemento">   
+                    <img class="imagenes" src="https://go-cursos.com/wp-content/uploads/2023/02/imagen-1-peluqueria-canina-1170x500.jpeg">                        
+                </div>
+            </div>
+        </div>
+
+        <div class="contenedor_info">
+            <div class="info_item">
+                <img src="https://cdn-icons-png.flaticon.com/512/423/423519.png" alt=""class="info_img">
+                <p>Abona mediante Mercado Pago</p>
+            </div>
+            <div class="info_item">
+                <img src="https://cdn.icon-icons.com/icons2/2622/PNG/512/gui_shipping_icon_157590.png" alt=""class="info_img">
+                <p>Envíos a Caba y Gba</p>
+            </div>
+        </div>
+
+        <h2>Nuestros clientes</h2>
+             <div class="info">
+                 <p class="parrafo_pri">Estamos felices del servicio que le brindamos a nuestros clientes<br> Por eso pensamos en compartir sus experiencias y que vos sepas que estas dejando a tu mascota en las manos de profesionales con amplia trayectoria y fiavilidad</p>
+             </div>
+
+            <br>
+        
+            <div id="contenido" class="contenido">
+                <!-- Aquí insertaremos contenido que recuperamos
+                mediante la API -->
+            </div>
+        
+        
+            <script>
+                traerDatosAPI()
+                traerDatosAPI()
+                traerDatosAPI()
+                traerDatosAPI()
+                traerDatosAPI()
+        
+                // Define una función llamada traerDatosAPI que realizará una solicitud a una API.
+                function traerDatosAPI() {
+                    // Utiliza la función fetch para realizar una solicitud GET a la URL de la API.
+                    fetch('https://randomuser.me/api') // API a leer
+        
+                        // La función then() se encarga de manejar la respuesta de la solicitud.
+                        .then(datos => datos.json()) // Convierte los datos de la respuesta a formato JSON y retorna una promesa.
+                       
+                       // Cuando se resuelva la promesa anterior, ejecuta esta función de devolución de llamada.
+                        .then(datos => {
+                            console.log(datos)
+                            
+                            // Actualiza el contenido del elemento HTML con el id "contenido".
+                            contenido.innerHTML += `
+                                <div class="tarjeta">
+                                    <!-- Muestra una imagen obtenida de los datos de la API. -->
+                                    <img src="${datos.results[0].picture.large}"</img><br>
+        
+                                </div>`;
+                        })
+                }
+            </script>
+
+
+        </div>
+
+        <h2>Galeria de nuestra veterinaria</h2>
+
+        <div class="contenedor_galeriaVeterinaria">
+            <div class="galeriaVeterinaria_item">
+                <img src="https://www.campustraining.es/wp-content/uploads/2022/12/salidas-peluqueria-canina-715x495.jpg.webp" alt="" class="galeriaVeterinaria_img" >
+            </div>
+
+            <div class="galeriaVeterinaria_item" >
+                <img src="https://www.zooplus.es/magazine/wp-content/uploads/2019/06/fotolia_132644817-768x513.jpg" alt="" class="galeriaVeterinaria_img">
+            </div>
+
+            <div class="galeriaVeterinaria_item" >
+                <img src="https://hospitalveterinarioburgos.com/wp-content/uploads/2020/05/EXT05-17-0801-MINI.jpg" alt="" class="galeriaVeterinaria_img" >
+            </div>
+
+            <div class="galeriaVeterinaria_item" >
+                <img src="https://us.123rf.com/450wm/liudmilachernetska/liudmilachernetska2301/liudmilachernetska230141158/197103592-veterinarian-examining-alexandrine-parakeet-in-clinic-closeup.jpg?ver=6" alt="" class="galeriaVeterinaria_img" >
+            </div>
+
+            
+
+
+        </div>
+        <br><br><h2>Marcas con las que trabajamos</h2><br><br>
+
+        <div class="contenedor-marcas">
+            <div class="marcas__item">
+                <img src="https://1000marcas.net/wp-content/uploads/2020/11/Royal-Canin-Logo.png" alt="" class="gallery__img">
+            </div>
+
+            <div class="marcas__item">
+                <img src="https://www.metrive.com.ar/images/logo-sabrositos.png" alt="" class="gallery__img">
+            </div>
+
+            <div class="marcas__item">
+                <img src="https://biodog.es/wp-content/uploads/2018/01/biodog-lema-3.png" alt="" class="gallery__img">
+            </div>
+
+            <div class="marcas__item">
+                <img src="https://www.purina.com.ar/themes/custom/purina/purina/assets/images/logo/logo.png" width="450" height="450" alt="" class="gallery__img">
+            </div>
+
+
+        </div>
+
+        
+
+
+
+        
+
+    </main>
+    <footer class="footer">
+        <div>
+          <p> &copy; 2023 Veterinaria SUR</p>
+        </div>
+        <div class="icons_footer">
+          <div a href="#"><span class="fas fa-envelope"></span></div>
+          <div a href="#"><span class="fab fa-facebook"></span> </div>
+          <div a href="#"><span class="fab fa-instagram"></span> </div>
+          <div a href="#"><span class="fab fa-twitter"></span> </div>
+        </div>
+      </footer>
+
+</div>
+
+</body>
+</html>

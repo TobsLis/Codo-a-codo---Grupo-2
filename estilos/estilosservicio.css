@@ -1,0 +1,299 @@
+  /*--------------fuente general-------------*/
+  *{font-family: 'Philosopher', sans-serif; 
+    font-size: 12px;       
+  }
+
+  body{
+     background-color:rgb(234, 217, 235);
+     cursor: url(imagenes/nuevapata.png), auto;/*ejemplo para cambiar el cursor*/
+     margin: 0px;
+     padding: 0px;
+  }
+
+  a{
+   cursor: url(imagenes/nuevapata.png), auto; /*ejemplo para cambiar el cursor*/ 
+  }
+
+  /*-----------Estilos header--------------*/
+  .encabezado-quienes{
+    display: flex;
+    background: linear-gradient(rgb(176, 130, 221),rgb(234, 217, 235));/*FONDO DEL HADER*/
+    justify-content: space-between;/*Distribuye ítems de un contenedor a lo largo del eje principal, dejando espacio entre ellos */
+    align-items: center;/*alinea los ítems en el eje secundario del contenedor,lo hace sobre la única línea que tiene un contenedor flex sin wrap.*/
+    text-align: center;    
+  }
+
+  .encabezado-quienes img{
+  width: 40px;/*ANCHO DE LA IMAGEN-LOGO A LOS COSTADOS DEL HEADER*/
+  margin: 0px 3px;
+  } 
+
+  .encabezado-quienes h1{
+    font-size: 20px;/*TAMAÑO FUENTE ENCABEZADO*/
+    color: rgb(12, 12, 12);
+  }
+
+  /*-------------ESTILOS DE LA BARRA DE NAVEGACION----------------*/
+  .menu-quienes{/*barra de nav*/
+    display: flex;
+    justify-content: center;/*distribuye items centro de eje principal*/
+    background-color: rgb(138, 18, 138);
+    text-align: center;
+    padding: 5px;
+    align-items: center;
+  }
+
+  nav ul{
+    list-style-type: none;/*le quita las viñetas a la lista*/
+    display: flex;
+    margin:0px;
+    padding:0px;
+  } 
+
+  nav ul li{
+    display: inline-block;/* muestra elem MENU uno al lado de otro,LO PONE HORIZONTAL*/
+    margin: 3px;/*separa los botones*/
+  }
+
+  nav ul li a{
+    font-size: 15px;
+    color: rgb(247, 244, 248);/*color fuente menu*/
+    text-decoration: none;/*saqué el subrayado*/
+    padding: 3px; 
+    border-radius: 10px;
+  }
+
+  nav ul li a:hover{/*COLORES DE FONDO Y FUENTE CUANDO POSICIONO MOUSE*/
+    background-color:rgb(234, 217, 235);
+    color: rgb(138, 18, 138);
+  }
+
+  .contenedor-encabezado-nav {
+    position: sticky;
+    top: 0;
+  }
+
+  /*--------Estilos main-------*/
+  .tituloservicios h2{
+    font-size: 20px;/*FUENTE TITULO DE PAGINA*/
+    text-align:  center; 
+  }
+
+  .precioservicios h3 {
+    font-size: 15px;
+  }
+
+  /* Flexbox para que quede una tabla al lado de la otra y centradas*/
+  .contenedortablas {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;   
+  }
+
+  /* Para centrar ultimo parrafo*/
+  .consultaprecio p {
+    text-align: center;
+    margin: 100px 0px;
+  }
+
+  /* Para alternar colores en las filas*/
+  tr:nth-child(2n+1) {
+     background-color: rgb(176, 130, 221);        
+  }   
+  tr:nth-child(2n) {
+    background-color: rgb(234, 217, 235);    
+  }
+  /* Para cambiar color de fondo y letra de la fila sobre la que apoya el mouse*/
+  tr:hover {
+    background-color: rgb(138, 18, 138);
+    color: white;
+    animation: 0.5s ease-in fila-tabla;
+  }
+
+  @keyframes fila-tabla {
+    0% {transform: scaleX(1.0);}
+    50% {transform: scaleX(1.15);}
+    100% { transform: scaleX(1.0);}
+  }
+
+  td {
+    text-align: center;
+  }            
+
+  /*--------------ESTILOS DEl FOOTER--------*/
+  .footer{
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(rgb(234, 217, 235), rgb(176, 130, 221));
+    border: 1px ridge rgb(114, 30, 188)  ;
+    align-items: center;
+    padding: 0px 10px;
+  }
+
+  .footer p{
+    color: rgb(75, 74, 74);
+    font-weight: 700; 
+  }
+
+  .icons_footer{
+    display: flex;
+    gap: 15px;
+  }
+
+  .icons_footer div{
+    color: rgb(75, 74, 74);
+  }
+
+  /*-------ESTILOS FORMULARIO TURNOS------------*/
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    background: rgb(176, 130, 221);
+    border-radius: 20px;
+    color: rgb(234, 217, 235);  
+ }
+
+ .campos {
+ display: flex;
+ flex-direction: column;
+ margin: 8px;
+ }
+
+ .mascota {
+   margin: 8px;
+ }
+
+ .flecha {
+   margin: 8px;
+ }
+
+ .flecha option {
+   color: rgb(138, 18, 138);
+ }
+
+ .boton input {
+   margin: 8px;
+   width: 100%;
+   padding: 5px;
+   border-radius: 6px;
+   font-size: 16px;
+   color: rgb(138, 18, 138);
+   border: 0px;
+ }
+
+ .boton input:hover {
+   background-color: rgb(138, 18, 138);
+   color:rgb(234, 217, 235);
+ }
+
+ form label {
+   margin-bottom: 0.2rem;
+ }
+
+ .campos input {
+   height:2.2rem;
+   padding-left: 0.5rem;
+   border: 1px solid rgb(176, 130, 221);
+   border-radius: 5px;
+ }
+
+ 
+  /*-------Responsive-Puntos de corte-----------*/
+  @media (min-width: 400px) {
+   .encabezado-quienes img{
+     width: 60px;/*ANCHO DE LA IMAGEN-LOGO A LOS COSTADOS DEL HEADER*/
+   } 
+
+   .encabezado-quienes h1{
+     font-size: 30px;/*TAMAÑO FUENTE ENCABEZADO*/
+   }
+
+   *{ font-size: 16px;       
+   }
+   
+   .menu-quienes {
+     padding: 10px;
+   }
+
+   nav ul li a{
+    font-size: 18px;
+    padding: 5px;
+   }
+
+   .tituloservicios h2{
+    font-size: 25px;
+   }
+
+   .precioservicios h3 {
+    font-size: 18px;
+   }
+
+   .contenedortablas {
+    gap: 50px;
+   }
+
+   /*table {
+    width: 25vw;
+   }*/  
+
+ }
+
+ @media (min-width: 720px) {
+   .encabezado-quienes img{
+     width: 90px;
+   } 
+
+   .encabezado-quienes h1{
+     font-size: 40px;
+   }
+
+   *{ font-size: 18px;       
+   }
+   
+   .menu-quienes {
+     padding: 10px;
+   }
+
+   nav ul li a{
+    font-size: 20px;
+    padding: 5px;
+   }
+
+   .tituloservicios h2{
+    font-size: 32px;
+   }
+
+   .precioservicios h3 {
+    font-size: 20px;
+   }
+
+   .contenedortablas {
+    gap: 100px;
+   }
+
+   table {
+    width: 25vw;
+   }   
+
+   form {
+    width: 40vw;
+    margin-bottom: 120px;
+   }
+
+ }
+  
+  
+
+
+
+ 
+
+
+
+

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagenes/silueta-perro-gato.png" type="image/x-icon">
+    <link rel="stylesheet" href="estilos/estilosContacto.css">
+    <link rel="stylesheet" href="estilos/estilosGenerales.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Contacto</title>
+
+</head>
+
+<body>
+<div class="contenedor-grid-quienes"><!--CLASE CONTENEDOR GENERAL-->
+  <div class="contenedor-encabezado-nav">
+    <header class="encabezado-quienes"><!--CLASE ENCABEZADO-->
+        <div><img src="imagenes/silueta-perro-gato.png" alt="imagen muestra silueta de perro y gato ">
+        </div><!--IMAGEN-LOGO LADO IZQ ENCABEZADO-->
+        <div>
+            <h1>VETERINARIA SUR</h1>
+        </div>
+        <div><img src="imagenes/silueta-perro-gato.png" alt="">
+        </div><!--IMAGEN-LOGO LADO DER ENCABE-->
+    </header>
+    
+    <nav class="menu-quienes"><!--CLASE DEL MENU DE NAV-->
+        <ul><i><b><!--sacar style en ul y puse italica a la lista y bold-->
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./petshop.html">Pet Shop</a></li>
+                    <li><a href="./servicios.html">Servicios</a></li>
+                    <li><a href="./turnos.html">Turnos</a></li>
+                    <li><a href="./quienes.html">Quienes somos</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </b></i>
+        </ul>
+    </nav>
+</div> 
+
+    <main>
+        
+         <article>
+            
+            <h2>Sucursal</h2>
+        
+            <div class="grid-cuerpo">
+
+                  <div class="info"><p class="parrafo_pri">
+                    <strong><u>Dirección:</u></strong><br><br>
+                    Av. Hipólito Yrigoyen 8651 (Temperley)<br><br>
+                    <b><u>Horarios:</u></b><br><br>
+                    Mañana: L a V de 10 hs a 14 hs<br><br>
+                    Tarde: L a V de 15 hs a 19hs.<br><br>
+                    Sábados: de 10 hs a 14 hs<br><br>
+                    Domingos y feriados: <u>CERRADO</u><br><br>
+                    <strong><u>Telefono:</u></strong><br><br>
+                    (011) 6079-1244</p></div>
+
+                  <div class="foto"><img id=foto src="imagenes/foto_sucursal.jpg" alt="Fotografia interior" width="450" height="450">
+                  </div>
+
+                  <div class="mapa"> <iframe id=mapa src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1639.0009550374846!2d-58.40207013739037!3d-34.75554470634162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd29114f944ad%3A0xd434cf252cd13ad2!2sAv.%20Hip%C3%B3lito%20Yrigoyen%208651%2C%20B1832BRD%20Lomas%20de%20Zamora%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1697066935341!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> </div>
+
+
+             </div>
+
+        </article>
+        <br><br><br>
+        <article>
+            <h2>Formulario de consulta</h2>
+            
+        
+            <form class="formulario"action="mostrar_datos.html">
+
+                <label class="texto" for="nom">Nombre y Apellido:</label>
+                <input class="controls1" type="text" name="nombre" id="nom" size="30" maxlength="20" required>
+                <br><br>
+                <label for="correo">Correo:</label>
+                <input class="controls1" type="email" name="email" id="correo">
+                <br><br>
+
+                <label>Servicios:</label>
+
+              <fieldset>          
+                         
+                <input type="radio" name="sexo" id="mas">
+                <label class="servicios" for="mas">Veterinaria general</label>
+                <br>
+                <input type="radio" name="sexo" id="fem">
+                <label class="servicios" for="fem">Peluqueria y baño</label>
+                <br>
+                <input type="radio" name="sexo" id="nb">
+                <label class="servicios" for="nb">Vacunas/Castraciones</label><br>
+                <input type="radio" name="sexo" id="nb">
+                <label class="servicios" for="nb">Precios/stock pet shop</label>
+
+              </fieldset>
+
+                <br>
+                
+                <label for="con">Consulta:</label><br>
+                <textarea class="controls1" name="consulta" id="con" cols="30" rows="10"></textarea>
+                <br><br>
+                <input class="controls" type="submit" value="Enviar consulta">
+                <br><br>
+                <input class="controls" type="reset" value="Restablecer">
+                <br>
+            </form>
+
+
+        </article>
+    </main>
+    
+    <footer class="footer">
+        <div>
+          <p> &copy; 2023 Veterinaria SUR</p>
+        </div>
+        <div class="icons_footer">
+          <div a href="#"><span class="fas fa-envelope"></span></div>
+          <div a href="#"><span class="fab fa-facebook"></span> </div>
+          <div a href="#"><span class="fab fa-instagram"></span> </div>
+          <div a href="#"><span class="fab fa-twitter"></span> </div>
+        </div>
+      </footer>
+
+
+</div>
+</body>
+</html>

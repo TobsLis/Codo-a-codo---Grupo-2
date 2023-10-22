@@ -1,0 +1,340 @@
+  /*----------------------ESTILOS MARIAN-----------------------*/
+
+*{font-family: 'Philosopher', sans-serif;        
+}/*fuente general*/
+
+body{
+    /*background-color:rgb(248, 233, 218);*/
+    background-color: rgb(234, 217, 235);
+    cursor: url(imagenes/imagenes/nuevapata.png), auto;/*ejemplo para cambiar el cursor*/
+    padding: 0px;/*IR PROBANDO o acordar como se deja en todas las hojas*/
+    margin: 0px;/*IR PROBANDO (ESPACIO FUERA DE LOS BORDES DEL ELEMENTO)*/
+}
+
+a{
+    cursor: url(imagenes/imagenes/nuevapata.png), auto; 
+    /*ejemplo para cambiar el cursor*/ 
+}
+
+h2{
+    font-size: 32px;
+    color: rgb(59, 59, 59);
+    text-align: center;
+}
+
+ /*------------------ESTILOS DEL HEADER---------------------*/
+
+ .encabezado-quienes{
+    display: flex;
+    background: linear-gradient(rgb(176, 130, 221),rgb(234, 217, 235));/*FONDO DEL HADER*/
+    justify-content: space-between;/*Distribuye ítems de un contenedor a lo largo del eje principal, dejando espacio entre ellos */
+    align-items: center;/*alinea los ítems en el eje secundario del contenedor,lo hace sobre la única línea que tiene un contenedor flex sin wrap.*/
+    text-align: center;    
+  }
+
+  .encabezado-quienes img{
+  width: 40px;/*ANCHO DE LA IMAGEN-LOGO A LOS COSTADOS DEL HEADER*/
+  margin: 0px 3px;
+  } 
+
+  .encabezado-quienes h1{
+    font-size: 20px;/*TAMAÑO FUENTE ENCABEZADO*/
+    color: rgb(12, 12, 12);
+  }
+
+  /*-------------ESTILOS DE LA BARRA DE NAVEGACION----------------*/
+  .menu-quienes{/*barra de nav*/
+    display: flex;
+    justify-content: center;/*distribuye items centro de eje principal*/
+    background-color: rgb(138, 18, 138);
+    text-align: center;
+    padding: 5px;
+    align-items: center;
+  }
+
+  nav ul{
+    list-style-type: none;/*le quita las viñetas a la lista*/
+    display: flex;
+    margin:0px;
+    padding:0px;
+  } 
+
+  nav ul li{
+    display: inline-block;/* muestra elem MENU uno al lado de otro,LO PONE HORIZONTAL*/
+    margin: 3px;/*separa los botones*/
+  }
+
+  nav ul li a{
+    font-size: 11px;
+    color: rgb(247, 244, 248);/*color fuente menu*/
+    text-decoration: none;/*saqué el subrayado*/
+    padding: 3px; 
+    border-radius: 10px
+  }
+
+  nav ul li a:hover{/*COLORES DE FONDO Y FUENTE CUANDO POSICIONO MOUSE*/
+    background-color:rgb(234, 217, 235);
+    color: rgb(138, 18, 138);
+  }
+
+  .contenedor-encabezado-nav {
+    position: sticky;
+    top: 0;
+  }
+
+/*------------------ESTILOS DEl FOOTER---------------------*/
+   
+.footer{
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(rgb(234, 217, 235), rgb(176, 130, 221));
+    border: 1px ridge rgb(114, 30, 188)  ;
+    align-items: center;
+    padding: 0px 10px;
+  }
+
+  .footer p{
+    color: rgb(75, 74, 74);
+    font-weight: 700; 
+  }
+
+  .icons_footer{
+    display: flex;
+    gap: 15px;
+  }
+
+  .icons_footer div{
+    color: rgb(75, 74, 74);
+  }
+
+
+/*------------------ESTILOS DEl carrucel---------------------*/
+
+.carrusel-contenido {
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: left;
+}
+.carrusel-caja {
+    -moz-animation: automatizacion 15s infinite linear;
+    -o-animation: automatizacion 15s infinite linear;
+    -webkit-animation: automatizacion 15s infinite linear;
+    animation: automatizacion 15s infinite linear;
+    -webkit-transition: all 0.75s ease;
+    -moz-transition: all 0.75s ease;
+    -ms-transition: all 0.75s ease;
+    -o-transition: all 0.75s ease;
+    transition: all 0.75s ease;
+    height: 20vw;
+    width: 300%;
+    
+}
+
+.imagenes{
+    height: 40vw;
+    width: 100%;
+}
+.carrusel-elemento {
+    float: left;
+    width: 33.333%;
+}
+@-moz-keyframes automatizacion {
+    0% {
+        margin-left: 0;
+    }
+    30% {
+        margin-left: 0;
+    }
+    35% {
+        margin-left: -100%;
+    }
+    65% {
+        margin-left: -100%;
+    }
+    70% {
+        margin-left: -200%;
+    }
+    95% {
+        margin-left: -200%;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+@-webkit-keyframes automatizacion {
+    0% {
+        margin-left: 0;
+    }
+    30% {
+        margin-left: 0;
+    }
+    35% {
+        margin-left: -100%;
+    }
+    65% {
+        margin-left: -100%;
+    }
+    70% {
+        margin-left: -200%;
+    }
+    95% {
+        margin-left: -200%;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+@keyframes automatizacion {
+    0% {
+        margin-left: 0;
+    }
+    30% {
+        margin-left: 0;
+    }
+    35% {
+        margin-left: -100%;
+    }
+    65% {
+        margin-left: -100%;
+    }
+    70% {
+        margin-left: -200%;
+    }
+    95% {
+        margin-left: -200%;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+
+
+/*------------------ESTILOS INFO---------------------*/
+
+.contenedor_info{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    justify-content: center;
+    gap: 60px;
+    padding: 10px;
+
+
+}
+.info_item{
+    display: flex;
+    object-fit: cover;
+
+}
+
+.info_item img{
+    height: 50px;
+    width: 50px;
+
+}
+
+
+.info_img{
+    width: 100%;
+    padding: 5px;
+    object-fit:contain;
+}
+.info_item p{
+    text-align: center;
+    font-size: 15px;
+}
+
+
+/*------------------ESTILOS DEl GALERIA CLIENTES ---------------------*/
+
+.contenedor_galeriaVeterinaria{
+    margin: 0;
+    display: grid;
+    grid-template-rows: repeat(2,auto);
+    grid-template-columns: repeat(2,auto);
+
+
+}
+.galeriaVeterinaria_item{
+    display: flex;
+    padding: 5px;
+    object-fit: cover;
+
+}
+
+.galeriaVeterinaria_item img{
+    justify-content: center;
+    border-radius: 30px;
+    height: 150px;
+
+
+
+}
+
+.galeriaVeterinaria_img{
+    width: 100%;
+    object-fit:contain;
+}
+
+
+/*------------------ESTILOS DE GALERIA DE MARCAS---------------------*/
+
+
+.contenedor-marcas{
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: repeat(2,auto);
+    grid-template-columns: repeat(2,auto);
+    /*width: 80%;*/
+    grid-area: marcas;
+
+
+}
+.marcas__item{
+    display: flex;
+    padding: 10px;
+    object-fit: cover;
+
+}
+
+.marcas__item img{
+    height: 100px;
+
+}
+.marcas__item img:hover{
+    height: 110px;
+}
+
+.gallery__img{
+    width: 100%;
+    padding: 5px;
+    object-fit:contain;
+}
+
+
+/*  estilos del contenedor grid */
+
+@media (min-width: 720px) {
+    .contenedor_galeriaVeterinaria{
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(4,auto);
+    
+    
+    }
+    .contenedor-marcas{
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4,auto);
+        /*width: 80%;*/
+        grid-area: marcas;
+    
+    
+    }
+}
+
+.contenido {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    justify-content: center;
+}

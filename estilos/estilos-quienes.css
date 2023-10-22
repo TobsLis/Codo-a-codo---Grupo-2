@@ -1,0 +1,212 @@
+*{font-family: 'Philosopher', sans-serif; 
+  font-size: 16px;           
+}/*fuente general*/
+
+body{
+    /*background-color:rgb(248, 233, 218);*/
+    background-color: rgb(234, 217, 235);
+    cursor: url(imagenes/nuevapata.png), auto;/*ejemplo para cambiar el cursor*/
+    padding: 0px;/*IR PROBANDO o acordar como se deja en todas las hojas*/
+    margin:  0px;/*IR PROBANDO (ESPACIO FUERA DE LOS BORDES DEL ELEMENTO)*/
+}
+a{
+    cursor: url(imagenes/nuevapata.png), auto; /*ejemplo para cambiar el cursor*/ 
+}
+/*----------------------------------------------*/ 
+ /*ESTILOS DEL HEADER*/
+ /*----------------------------------------------*/
+ .encabezado-quienes{/*grid-area: encabezado*/
+    display: flex;
+    background: linear-gradient(rgb(176, 130, 221),rgb(234, 217, 235));/*FONDO DEL HADER*/
+    justify-content: space-between;/*Distribuye ítems de un contenedor a lo largo del eje principal, dejando espacio entre ellos */
+    align-items: center;/*alinea los ítems en el eje secundario del contenedor,lo hace sobre la única línea que tiene un contenedor flex sin wrap.*/
+
+      }
+ .encabezado-quienes img{
+    width: 40px;/*ANCHO DE LA IMAGEN-LOGO A LOS COSTADOS DEL HEADER*/
+      }
+ h1{
+    font-size: 40px;/*TAMAÑO FUENTE ENCABEZADO*/
+    color: rgb(59, 59, 59);
+    text-align: center;
+       }
+      
+/*----------------------------------------------*/ 
+/*ESTILOS DE LA BARRA DE NAVEGACION*/
+/*----------------------------------------------*/
+ .menu-quienes{/*grid-area: barra*/
+    display: flex;
+    justify-content: center;/*distribuye items centro de eje principal*/
+    background-color: rgb(138, 18, 138);
+    padding: 10px;
+    align-items: center; 
+    text-align: center;
+   }
+    nav ul{
+        list-style-type: none;/*le quita las viñetas a la lista*/
+        display: flex;
+        margin:0px;
+        padding:0px;
+    } 
+    nav ul li{
+        display: inline-block;/* muestra elem MENU uno al lado de otro,LO PONE HORIZONTAL*/
+        margin: 0px 10px;/*separa los botones a los costados*/
+        
+    }
+    nav ul li a{
+        font-size: 20px;
+        color: rgb(234, 217, 235);/*color fuente menu*/
+        text-decoration: none;/*saqué el subrayado*/
+        padding: 10px;
+        border-radius: 10px;
+    }
+    nav ul li a:hover{/*COLORES DE FONDO Y FUENTE CUANDO POSICIONO MOUSE*/
+        background-color:rgb(234, 217, 235);
+        color: rgb(138, 18, 138);
+     }
+     .contenedor-encabezado-nav {
+        position: sticky;
+        top: 0;
+      }
+
+    /*----------------------------------------------*/ 
+    /*ESTILOS DEl MAIN*/
+    /*----------------------------------------------*/
+    h2{
+        font-size: 32px;/*FUENTE TITULO DE PAGINA*/
+        text-align:  center;  
+        color: rgb(59, 59, 59);
+       }
+        
+
+    .contenedor-tienda{ /*seccion con 2 párrafos, las imagenes en medio y testimonios - grid-area: tienda;*/
+        display: flex;
+        flex-direction:column;/*eje principal vertical, uno abajo de otro: la presentacion del quienes somos más los testimonios*/
+        align-items: center;
+        text-align: justify;
+        padding:4px;
+    }
+      
+    .imagen {/*clase de las 3 imagenes del QUIENES SOMOS, DENTRO DE CLASE TIENDA*/
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1px;
+        justify-content: center;
+    }
+    .item {
+      min-width: 250px;
+      max-width: 442px;
+    }
+
+
+    .testimonio{/*CLASE DE TESTIMONIOS DE CLIENTES*/
+        width: auto;
+        height:130px ;
+        overflow: scroll;/*AGREGADO PARA ACHICAR EL LARGO*/
+        text-align: justify;  
+        color: rgb(75, 74, 74); 
+        border:2px solid rgba(148, 146, 150, 0.88);
+        padding:3px 13px 3px 13px; 
+
+        /* background-color: rgb(230, 203, 233) ;*/   
+    }
+    /*.paciente{ /*clase de las imagenes de CLASE TESTIMONIOS--SAQUÉ LA FOTOS DE VISTA
+         width: 20%;
+         min-width: 250px;
+         max-width: 350px;
+    } */ 
+           
+    .nosotros{/*CLASE CONTENEDORA DE DOCTORES Y STAFF - grid-area: nosotros*/
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 3px; /*Espacios entre los hijos*/
+      justify-items:center;      
+     }
+     
+    .equipo{/*CLASE DE LOS ITEMS DE CLASE nosotros*/
+        background-color: rgb(248, 233, 218);/*Color de fondo de los hijos */        
+        padding: 4px;
+        border: 1px solid rgb(31, 31, 31);/*Borde de los elementos hijos */
+        text-align: center;
+        width: 24%;
+        min-width: 200px;
+        align-items: baseline;
+    }
+    .equipo img{
+      width: 45%;
+      height: 30%;
+      padding-bottom: 15px;
+    }
+
+    /*----------------------------------------------*/ 
+    /*ESTILOS DEl FOOTER*/
+    /*----------------------------------------------*/
+    .footer{
+        display: flex;
+        justify-content: space-between;
+        background: linear-gradient(rgb(234, 217, 235),rgb(176, 130, 221) );
+        border: 1px ridge rgb(114, 30, 188)  ;
+        align-items: center;
+        padding: 0px 10px;
+      }
+      .footer p{
+        color: rgb(59, 59, 59);
+        font-weight: 700; 
+      }
+      .icons_footer{
+        display: flex;
+        gap: 15px;
+      }
+      .icons_footer div{
+        color: rgb(59, 59, 59);
+      }
+      /*----------------------------------------------*/ 
+      /* les pongo un nombre para ubicarlos en un area de la grilla--*/
+      /*----------------------------------------------*/ 
+    .encabezado-quienes{ grid-area: encabezado; }
+    .menu-quienes{ grid-area: barra; } 
+    .contenedor-tienda{ grid-area: tienda; }  
+    .nosotros{ grid-area: nosotros;   }
+    .footer{ grid-area: footer; }
+    /*----------------------------------------------*/ 
+    /*ESTILOS DEL CONTENEDOR PRINCIPAL */
+    .contenedor-grid-quienes{
+      display: grid;
+      grid-template: repeat(5, auto);
+      grid-template-areas: " encabezado " 
+                            " barra "
+                            " tienda"
+                            "nosotros"
+                            "footer";
+    }
+
+    /*CONFIGURACION PARA iPHONE 12 PRO */
+    @media (max-width: 390px){
+      
+    .contenedor-grid-quienes { 
+      
+        font-size: 20px;
+    
+      .encabezado-quienes img{
+        width: 40px;/*ANCHO DE LA IMAGEN-LOGO A LOS COSTADOS DEL HEADER
+      } 
+   
+      .encabezado-quienes h1{
+        font-size: 22px;
+        TAMAÑO FUENTE ENCABEZADO
+      }
+     
+      .menu-quienes {
+        padding: 4px;
+      }
+   
+      nav ul li a{
+       font-size: 16px;
+       padding: 0px;
+      }
+      .contenedor-tienda{
+        width: auto;
+      }*/
+      

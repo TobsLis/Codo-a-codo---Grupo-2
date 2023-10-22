@@ -1,0 +1,412 @@
+*{font-family: 'Philosopher', sans-serif;        
+}/*fuente general*/
+
+body{
+    /*background-color:rgb(248, 233, 218);*/
+    background-color: rgb(234, 217, 235);
+    cursor: url(imagenes/nuevapata.png), auto;/*ejemplo para cambiar el cursor*/
+    padding: 0px;/*IR PROBANDO o acordar como se deja en todas las hojas*/
+    margin: 0px;/*IR PROBANDO (ESPACIO FUERA DE LOS BORDES DEL ELEMENTO)*/
+}
+
+a{
+    cursor: url(imagenes/nuevapata.png), auto; 
+    /*ejemplo para cambiar el cursor*/ 
+}
+
+
+
+ /*------------------ESTILOS DEL HEADER---------------------*/
+
+.encabezado-quienes{
+    display: flex;
+    background: linear-gradient(rgb(176, 130, 221),rgb(234, 217, 235));/*FONDO DEL HADER*/
+    justify-content: space-between;/*Distribuye ítems de un contenedor a lo largo del eje principal, dejando espacio entre ellos */
+    align-items: center;/*alinea los ítems en el eje secundario del contenedor,lo hace sobre la única línea que tiene un contenedor flex sin wrap.*/
+    position:sticky;
+    top: 0px;}
+
+.encabezado-quienes img{
+    width: 90px;/*ANCHO DE LA IMAGEN-LOGO A LOS COSTADOS DEL HEADER*/
+      }
+
+.contenedor-encabezado-nav {
+        position: sticky;
+        top: 0;}
+ 
+h1{
+    font-size: 40px;/*TAMAÑO FUENTE ENCABEZADO*/
+    color: rgb(59, 59, 59);
+    text-align: center;
+       }
+
+h2{
+    font-size: 32px;
+    color: rgb(59, 59, 59);
+    text-align: center;
+}
+
+
+/*--------------ESTILOS DE LA BARRA DE NAVEGACION------------*/
+
+
+.menu-quienes{/*barra de nav*/
+    display: flex;
+    justify-content:center;/*distribuye items centro de eje principal*/
+    background-color: rgb(138, 18, 138);
+    padding: 5px;
+    text-align: center;
+    align-items: center;
+    
+
+    /*width: 100%;
+    /*height: 50px; 
+    /*text-align: center;*/
+   }
+   /*.menu-quienes a{
+    text-size-adjust:auto;
+   }*/
+  
+    nav ul{
+        list-style-type: none;/*le quita las viñetas a la lista*/
+        display: flex;
+        margin:0px;
+        padding:0px;
+    } 
+    nav ul li{
+        display: block;/* muestra elem MENU uno al lado de otro,LO PONE HORIZONTAL*/
+        margin: 3px;/*separa los botones a los costados*/
+       
+    }
+    nav ul li a{
+        font-size: 20px;
+        color: rgb(247,244,248);/*color fuente menu CAMBIAR DE 12 A 235*/
+        text-decoration: none;/*saqué el subrayado*/
+        padding: 3px; 
+        border-radius: 10px;
+        display: block; /* agregue*/
+    }
+        
+    nav ul li a:hover{/*COLORES DE FONDO Y FUENTE CUANDO POSICIONO MOUSE*/
+        background-color:rgb(234, 217, 235);
+        color: rgb(138, 18, 138);
+     } 
+     /*SE AGREGAN PARA EL SUB MENU*/
+     nav > li{ 
+        float:left;
+     }
+     nav li ul{
+        display:none; /* para desaparecer los sub menu*/
+        position: absolute; /* la posicion */
+        min-width: 10px;
+        
+     }
+     nav li:hover > ul{/*para que aparescan al pasar el mouse*/
+        display:block;
+        background-color: rgb(119, 6, 141);
+        opacity:.89;
+        justify-content:baseline;
+        align-items:normal;
+        border-radius: 10px;
+        
+     }
+     nav li ul li { /* para los sub menus para que los sub menu se vayan al lado*/
+        position: relative;
+        
+     }
+     nav li ul li ul{ /* ubica a la derecha el sub menu*/
+        right: -110px;
+        top: 0px;
+     }
+     
+/* Parte del sub menu*/
+
+
+/*#rubros {
+    display: flex;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-family: 'Philosopher', sans-serif;
+        
+}*/
+/* PARTE DEL GRID PRODUCTOS */
+.grid-item1 {
+    background-color: aliceblue;
+    border: black 1px solid;
+    border-radius: 15px;
+    width: 210px;
+    height: 250px;
+    grid-area: i1;    
+}
+.grid-item2 {
+    background-color: aliceblue;
+    border: black 1px solid;
+    border-radius: 15px;
+    width: 210px;
+    height: 250px;
+    grid-area: i2;
+    
+}   
+.grid-item3 {
+    background-color: aliceblue;
+    border: black 1px solid;
+    border-radius: 15px;
+    width: 210px;
+    height: 250px;
+    grid-area: i3;
+}
+.grid-item4 {
+    background-color: aliceblue;
+    border: black 1px solid;
+    border-radius: 15px;
+    width: 210px;
+    height: 250px;
+    grid-area: i4;
+}
+.grid-item5 {
+    background-color: aliceblue;
+    border: black 1px solid;
+    border-radius: 15px;
+    width: 210px;
+    height: 250px;
+    grid-area: i5;
+}
+.grid-item6 {
+    background-color: aliceblue;
+    border: black 1px solid ;
+    border-radius: 15px;
+    width: 210px;
+    height: 250px;
+    grid-area: i6;
+}
+
+.contenedor-grid {
+    display:grid;
+    /*grid-template:auto auto auto / auto auto;*/
+    grid-template-areas: "i1 i2 i3"
+                         "i4 i5 i6";
+    gap: 20px;*/
+    /*justify-items: center;*/
+    align-content: space-evenly;
+    justify-content: space-evenly;
+    /*align-items: center;*/
+
+}
+.contenedor-grid a{
+    border: 2px solid  rgb(119, 6, 141);/*anchura, estilo y color borde*/
+    padding: 6px; /*espacio alrededor texto*/
+    background-color: rgb(7, 187, 7); /*color botón*/
+    color:white; /*color texto*/
+    text-decoration:none; /*decoración texto*/
+    text-transform:initial; /*capitalización texto*/
+    /*font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+    border-radius: 30px; /*bordes redondos*/
+}
+.contenedor-grid a:hover{/*COLORES DE FONDO Y FUENTE CUANDO POSICIONO MOUSE*/
+    background-color:rgb(223, 16, 223);
+    color: white;
+ } 
+.contenedor-grid p{
+    margin: 8px;
+    padding: 2px;
+}
+
+.grid-item1 img{
+    
+    width: 180px;
+    height: 180px;
+    
+}
+.grid-item2 img{
+    
+    width: 180px;
+    height: 180px;
+    
+}
+.grid-item3 img{ 
+    
+    width: 180px;
+    height: 180px;
+    
+}
+.grid-item4 img{
+    
+    width: 180px;
+    height: 180px;
+    
+}
+.grid-item5 img{
+    
+    width: 180px;
+    height: 180px;
+    
+}
+.grid-item6 img{
+    
+    width: 180px;
+    height: 180px;
+    
+}
+/*-------------------------SlIDER--------------------------*/
+.slider {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: black;
+}
+
+.slider .box {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    transition-delay: 0s;
+    z-index: 1;
+}
+ .box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.contenido {
+    position:relative;
+    text-align: center;
+    max-width: 800px;
+
+}
+.contenido h1{
+    font-size: 8em;
+    line-height: 1em;
+    color: white;
+    text-shadow: 0 5px 5px rgb(0, 0, 0.5);
+.contenido }
+
+
+
+
+/*------------------ESTILOS DEl FOOTER---------------------*/
+   
+.footer{
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(rgb(234, 217, 235),rgb(176, 130, 221) );
+    border: 1px ridge rgb(114, 30, 188)  ;
+    align-items:center;
+    padding: 0px 10px;
+  }
+.footer p{
+    color: rgb(59, 59, 59);
+    font-weight: 700; 
+  }
+.icons_footer{
+    display: flex;
+    gap: 15px;
+  }
+.icons_footer div{
+    color: rgb(59, 59, 59);
+  }
+/************************************************************/
+
+
+ /*-------Responsive-Puntos de corte-----------*/
+ @media (min-width: 400px) {
+    .encabezado-quienes img{
+      width: 60px;/*ANCHO DE LA IMAGEN-LOGO A LOS COSTADOS DEL HEADER*/
+    } 
+ 
+    .encabezado-quienes h1{
+      font-size: 30px;/*TAMAÑO FUENTE ENCABEZADO*/
+    }
+ 
+    *{ font-size: 16px;       
+    }
+    
+    .menu-quienes {
+      padding: 10px;
+    }
+ 
+    nav ul li a{
+     font-size: 18px;
+     padding: 5px;
+    }
+ 
+    .tituloservicios h2{
+     font-size: 25px;
+    }
+ 
+    .precioservicios h3 {
+     font-size: 18px;
+    }
+ 
+    .contenedortablas {
+     gap: 50px;
+    }
+ 
+    /*table {
+     width: 25vw;
+    }*/  
+ 
+  }
+ 
+  @media (min-width: 720px) {
+    .encabezado-quienes img{
+      width: 90px;
+    } 
+ 
+    .encabezado-quienes h1{
+      font-size: 40px;
+    }
+ 
+    *{ font-size: 18px;       
+    }
+    
+    .menu-quienes {
+      padding: 10px;
+    }
+ 
+    nav ul li a{
+     font-size: 20px;
+     padding: 5px;
+    }
+ 
+    .tituloservicios h2{
+     font-size: 32px;
+    }
+ 
+    .precioservicios h3 {
+     font-size: 20px;
+    }
+ 
+    .contenedortablas {
+     gap: 100px;
+    }
+ 
+    table {
+     width: 25vw;
+    }   
+ 
+    form {
+     width: 40vw;
+     margin-bottom: 120px;
+    }
+ 
+  }
+   
+   
+ 

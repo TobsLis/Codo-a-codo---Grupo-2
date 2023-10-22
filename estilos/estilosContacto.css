@@ -1,0 +1,128 @@
+/*-----------------------ESTILOS TOBI---------------------*/
+
+#mapa {/*margin: 10px 30px;*/
+       border-radius: 20px;
+       width: 450px;
+       height: 450px;}
+
+#foto {/*margin: 10px 10px;*/
+       border-radius: 20px;
+       width: 450px;
+       height: 450px;}
+
+#sucursal {width: 30%;
+         border-radius: 20px;}
+
+.parrafo_pri {color: rgb(234, 217, 235);
+              min-width: 270px;}
+
+
+/*----------------------FORMULARIO-------------------*/
+.formulario {
+    width: 380px;
+    background: rgb(176, 130, 221);
+    padding: 30px;
+    margin:auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    color: rgb(234, 217, 235);}
+
+.servicios {color:rgb(234, 217, 235)}
+
+.controls {
+    width: 100%;
+    padding: 5px;
+    border-radius: 6px;
+    font-size: 16px;
+    color: rgb(138, 18, 138);
+    border: 0px;}
+
+.controls1 {
+    width: 100%;
+    padding: 5px;
+    border-radius: 6px;
+    font-size: 16px;
+    color: rgb(138, 18, 138);
+    border: 0px;}
+
+fieldset {border-color: rgb(255,255,255);}
+
+form .controls:hover {
+    background-color: rgb(138, 18, 138);
+    color:rgb(234, 217, 235);}
+
+/*---------------------RESPONSIVE---------------------*/
+
+.grid-cuerpo {
+    display: grid;
+    grid-template: auto auto auto;
+    grid-template-areas: "foto info mapa";
+    justify-content: center;
+    }
+
+.mapa {grid-area: mapa;}
+
+.foto {grid-area: foto;}
+
+.info {grid-area: info;
+      font-size: 16px;
+      background-color: rgb(176, 130, 221);
+      border-radius: 20px;
+      margin: 10px 30px;
+      padding: 6px;}
+
+/*CONFIGURACION PRIMER CORTE PC*/
+@media (max-width: 1240px) {
+    .grid-cuerpo {
+        display: grid;
+        grid-template: auto auto / auto auto;
+        grid-template-areas: "info foto"
+                             "info mapa";
+        justify-content: center;
+        gap: 30px;
+    }}
+
+/*CONFIGURACION PARA IPAD MINI*/
+@media (max-width: 820px) {
+    .grid-cuerpo {
+        display: grid;
+        grid-template: auto auto auto / auto auto auto;
+        grid-template-areas: "foto foto foto"
+                             "info info info"
+                             "mapa mapa mapa";
+        justify-content: center;
+        gap: 30px;
+    }}
+
+/*CONFIGURACION PARA IPHONE 12*/
+@media (max-width: 390px) {
+    .grid-cuerpo {
+        display: grid;
+        max-width: 100%;
+        grid-template: auto auto auto / auto auto auto;
+        grid-template-areas: "foto foto foto"
+                             "info info info"
+                             "mapa mapa mapa";
+        justify-content:center;
+        gap: 20px;}
+     
+    .formulario {
+        width: 220px;
+        padding: 30px;
+        margin: auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+   #mapa {margin: 10px 40px;
+        border-radius: 20px;
+        width: 280px;
+        height: 280px;}
+ 
+    #foto {margin: 10px 40px;
+        border-radius: 20px;
+        width: 280px;
+        height: 280px;}
+   
+    }
