@@ -14,7 +14,22 @@ a{
     /*ejemplo para cambiar el cursor*/ 
 }
 
+/************agregado para accesorios y farmacia***/
+.preintro{
+    display:block;
 
+}
+.preintro h3{
+    font-size: 20px;
+    text-align: center;
+    
+}
+.preintro p{
+    font-size: 18px;
+    font-weight: 250;
+    text-align: center;
+    padding: 0px;
+}
 
  /*------------------ESTILOS DEL HEADER---------------------*/
 
@@ -255,50 +270,105 @@ h2{
 .slider {
     position: relative;
     width: 100%;
-    min-height: 100vh;
-    display: flex;
+    min-height:100vh;
+    display:flex;
     justify-content: center;
+    padding: 0;
     align-items: flex-end;
-    background: black;
+    background:transparent;
+    
 }
 
 .slider .box {
     position:absolute;
     top: 0;
-    left: 0;
+    left:0;
     width: 100%;
     height: 100%;
-    padding: 100px;
+    padding: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.5s;
     transition-delay: 0s;
     z-index: 1;
+    clip-path: circle(0.5em at bottom);
 }
- .box img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+.slider input[type="radio"]:checked +.box {
+    z-index: 10;
+    clip-path:circle(20em at center);
+    transition-delay: 0.8s;
+
+}
+ .slider .box img {
+    position:absolute;  
+     
+    top: 0;    
+    width: 100%;  /* ACOMODAR PARA QUE SEA VEA BIEN*/
     height: 100%;
-    object-fit: cover;
+    justify-content: center;
+    object-fit:contain;
+    filter: brightness(75%);
+    
+    
 }
-.contenido {
+.slider .box .contenido {
+    justify-content:center;
     position:relative;
     text-align: center;
     max-width: 800px;
 
 }
-.contenido h1{
-    font-size: 8em;
+.slider .box .contenido h1{
+    font-size: 3em;
     line-height: 1em;
     color: white;
     text-shadow: 0 5px 5px rgb(0, 0, 0.5);
-.contenido }
-
-
-
+}
+.slider .box .contenido a{
+    position:relative;
+    display: inline-block;
+    background: rgb(234, 217, 235);
+    padding: 10px 30px;
+    color:rgb(223, 16, 223);
+    font-weight: 500;
+    margin-top: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid rgb(2, 0, 25) ;/*puse por poner este color*/
+    transition: 0.3s;
+}
+.slider .box .contenido a:hover{
+    background: transparent;
+    border: 2px solid;
+}
+.slider input[type="radio"]{
+    position: relative;
+    z-index: 1000;
+    margin: 5px;
+    margin-bottom: 40px;
+    outline: none;
+    cursor: pointer;
+    background-color: white;
+    width: 1.15em;
+    height: 1.15em;
+    border-radius: 50%;
+    display: grid;
+    place-content:center;/* ver si se saca */
+}
+.slider input[type="radio"]::before {
+    content: '';
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em rgb(234, 217, 235);
+    
+}
+.slider input[type="radio"]:checked::before{
+    transform: scale(2);
+}
 
 /*------------------ESTILOS DEl FOOTER---------------------*/
    
