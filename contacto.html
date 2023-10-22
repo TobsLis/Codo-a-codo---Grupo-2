@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="./contacto.js"></script>
     <title>Contacto</title>
 
 </head>
@@ -75,10 +76,10 @@
             <h2>Formulario de consulta</h2>
             
         
-            <form class="formulario"action="mostrar_datos.html">
+            <form class="formulario" name="fcontacto">
 
                 <label class="texto" for="nom">Nombre y Apellido:</label>
-                <input class="controls1" type="text" name="nombre" id="nom" size="30" maxlength="20" required>
+                <input class="controls1" type="text" name="nombre" id="nom" size="30" maxlength="20" onkeypress="return sololetras(event)" required>
                 <br><br>
                 <label for="correo">Correo:</label>
                 <input class="controls1" type="email" name="email" id="correo">
@@ -106,7 +107,7 @@
                 <label for="con">Consulta:</label><br>
                 <textarea class="controls1" name="consulta" id="con" cols="30" rows="10"></textarea>
                 <br><br>
-                <input class="controls" type="submit" value="Enviar consulta">
+                <input class="controls" type="button" value="Enviar consulta" onclick="validarEnviar()">
                 <br><br>
                 <input class="controls" type="reset" value="Restablecer">
                 <br>

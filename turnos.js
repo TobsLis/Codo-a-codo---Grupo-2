@@ -19,7 +19,8 @@ function validarEnviar() {
         return;
     }
 
-    if (document.fturnos.email.validity.typeMismatch) {
+    if (document.fturnos.email.validity.typeMismatch ||
+        document.fturnos.email.value.length <=1) {
         alert("Debe ingresar una casilla de correo válida");
         document.fturnos.email.focus();
         return;
@@ -54,9 +55,9 @@ function validarEnviar() {
    } 
 
    function sololetras(e){
-    key = e.KeyCode || e.which;
+    let key = e.KeyCode || e.which;
     teclado = String.fromCharCode(key).toLowerCase();
-    letras = "abcdefghijklmnñopqrstuvwxyz";
+    letras = "áéíóúabcdefghijklmnñopqrstuvwxyzÁÉÍÓÚäëïöüÄËÏÖÜàèìòùÀÈÌÒÙ ";
     especiales = "8-37-38-46";
     teclado_especial = false;
     for(var i in especiales){
@@ -82,6 +83,11 @@ function validarEnviar() {
     }
 
    }
+
+   
+
+
+
 
 
    

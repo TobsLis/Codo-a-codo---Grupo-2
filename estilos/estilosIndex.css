@@ -332,9 +332,65 @@ h2{
     }
 }
 
+
+
+/*-------ESILOS API--------*/
+
 .contenido {
     display: flex;
     flex-wrap: wrap;
     gap: 100px;
     justify-content: center;
 }
+
+
+.container {
+    margin:0px auto;
+    justify-content: center;
+    text-align:center
+}
+
+.contenido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button {
+    font-size: 16px;
+    color: white;
+    background-color: rgb(138, 18, 138);
+    border-radius: 10px;
+    padding: 10px;
+}
+  
+.tarjeta {
+    float: left;
+    border: px solid rgb(138, 18, 138);
+    background-color: rgb(176, 130, 221);
+    border-radius: 20px;
+    margin:4px; padding: 6px;
+    width:260px;
+    height:210px;
+    font-size: 16px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.tarjeta img {
+    border-radius: 10px;
+    width: 150px;
+    margin-top: 10px;
+}
+
+.parrafo_pri {color: rgb(234, 217, 235);
+    min-width: 270px;
+    font-size: 16px;
+    text-align: center;}
+
+.info {grid-area: info;
+        background-color: rgb(176, 130, 221);
+        position: center;
+        border-radius: 20px;
+        margin: 10px 100px;
+        padding: 6px;}
