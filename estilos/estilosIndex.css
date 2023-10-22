@@ -384,7 +384,6 @@ button {
 }
 
 .parrafo_pri {color: rgb(234, 217, 235);
-    min-width: 270px;
     font-size: 16px;
     text-align: center;}
 
@@ -392,5 +391,5 @@ button {
         background-color: rgb(176, 130, 221);
         position: center;
         border-radius: 20px;
-        margin: 10px 100px;
+        margin: 20px;
         padding: 6px;}
